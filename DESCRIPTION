@@ -1,0 +1,34 @@
+Package: ssdvignettes
+Title: Species Sensitivity Distribution Vignettes
+Version: 0.0.0.9000
+Authors@R: c(
+    person("Joe", "Thorley", , "joe@poissonconsulting.ca", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-7683-4592")),
+    person("Rebecca", "Fisher", , "R.Fisher@aims.gov.au", role = "aut"),
+    person("David", "Fox", , "david.fox@environmetrics.net.au", role = "aut"),
+    person("Carl", "Schwarz", role = "aut"),
+    person("Angeline", "Tillmanns", role = "ctb"),
+    person("Seb", "Dalgarno", , "seb@poissonconsulting.ca", role = "ctb",
+           comment = c(ORCID = "0000-0002-3658-4517")),
+    person("Kathleen", "McTavish", role = "ctb"),
+    person("Heather", "Thompson", role = "ctb"),
+    person("Doug", "Spry", role = "ctb"),
+    person("Rick", "van Dam", role = "ctb"),
+    person("Graham", "Batley", role = "ctb"),
+    person("Ali", "Azizishirazi", role = "ctb"),
+    person("Province of British Columbia", role = c("fnd", "cph")),
+    person("Environment and Climate Change Canada", role = c("fnd", "cph")),
+    person("Australian Government Department of Climate Change, Energy, the Environment and Water", role = c("fnd", "cph")),
+    person("Australian Institute Marine Science", role = c("fnd", "cph")),
+    person("Poisson Consulting", role = c("fnd", "cph"))
+  )
+Description: What the package does (one paragraph).
+License: Apache License (== 2.0) | file LICENSE
+URL: https://github.com/poissonconsulting/ssdvignettes, https://poissonconsulting.github.io/ssdvignettes/
+BugReports: https://github.com/poissonconsulting/ssdvignettes/issues
+Depends:
+    R (>= 4.1)
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2.9000
+Config/Needs/website: poissonconsulting/poissontemplate
