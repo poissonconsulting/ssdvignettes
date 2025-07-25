@@ -1,6 +1,6 @@
 #' Get the the version of ssdvignettes
 #'
-#' Prints the version of ssdvigenttes you have installed
+#' Prints the version of ssdvignettes you have installed
 #'
 #' @returns The version of ssdvignettes
 #' @export
