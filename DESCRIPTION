@@ -55,3 +55,4 @@ Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2.9000
 Config/Needs/website: poissonconsulting/poissontemplate
 VignetteBuilder: knitr
+Config/testthat/edition: 3
