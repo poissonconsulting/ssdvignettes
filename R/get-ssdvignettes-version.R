@@ -4,6 +4,7 @@
 #'
 #' @returns The version of ssdvignettes
 #' @export
+#' @importFrom ssdtools ssd_dists_all ssd_fit_dists
 #'
 #' @examples
 #' get_ssdvignettes_version()
