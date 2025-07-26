@@ -2,5 +2,5 @@
 
 # ssdvignettes 0.0.0.9001 (2025-07-25)
 
-- Internal changes only.
+- Adding `get_ssdvignettes_version()` function.
 
