@@ -40,7 +40,7 @@ Ag
 Let us fit a log-normal distribution to the Ag endpoint data and estimate the parameters:
 
 ```{r warning=FALSE, message=FALSE}
-fit <- ssd_fit_dists(Ag, dist="lnorm")
+fit <- ssd_fit_dists(Ag, dists="lnorm")
 fit
 ```
 
@@ -230,7 +230,7 @@ res <- plyr::ldply(sample.sizes, function(n, mu, sd, nsim=1000){
           df <- data.frame(Conc= exp(rnorm(n, mean=mu, sd=sd)))
 
      # find the mle using ssd tools 
-     fit <- ssd_fit_dists(df, dist="lnorm")
+     fit <- ssd_fit_dists(df, dists="lnorm")
        },  silent=TRUE)
      }
 
@@ -445,7 +445,7 @@ We can also apply this to other distributions such as the gamma
 distribution. If we fit a gamma distribution to the
 Ag data we obtain:
 ```{r warnings=FALSE, message=FALSE}
-fit.gamma <- ssd_fit_dists(Ag, dist="gamma")
+fit.gamma <- ssd_fit_dists(Ag, dists="gamma")
 fit.gamma
 ```
 The bias corrected estimates are:
@@ -575,7 +575,7 @@ res <- plyr::ldply(sample.sizes, function(n, shape, scale, nsim=1000){
      df <- data.frame(Conc= rgamma(n, shape=shape, scale=scale))
      
      # find the mle using ssd tools 
-     fit <- ssd_fit_dists(df, dist="gamma")
+     fit <- ssd_fit_dists(df, dists="gamma")
        },  silent=TRUE)
      }
      
