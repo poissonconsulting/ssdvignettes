@@ -53,6 +53,7 @@ Suggests:
 VignetteBuilder: 
     knitr
 Remotes:
+    cran/mle.tools,
     poissonconsulting/envirotox,
     poissonconsulting/ssdtools@dev
 Config/Needs/website: poissonconsulting/poissontemplate
