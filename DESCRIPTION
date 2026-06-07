@@ -31,13 +31,17 @@ Depends:
     R (>= 4.1),
     ssdtools (>= 2.3.0.9003)
 Suggests:
+    car,
     dplyr,
     envirotox,
     ggplot2,
     glue,
     knitr,
+    mle.tools,
+    plyr,
     purrr,
     readr,
+    reshape2,
     rmarkdown,
     scales,
     sessioninfo,
