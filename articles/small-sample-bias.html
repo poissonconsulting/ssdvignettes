@@ -87,7 +87,7 @@
                         <h4 data-toc-skip class="author">ssdtools
 Team</h4>
             
-            <h4 data-toc-skip class="date">2026-06-07</h4>
+            <h4 data-toc-skip class="date">2026-07-14</h4>
       
       <small class="dont-index">Source: <a href="https://github.com/poissonconsulting/ssdvignettes/blob/main/vignettes/small-sample-bias.Rmd" class="external-link"><code>vignettes/small-sample-bias.Rmd</code></a></small>
       <div class="hidden name"><code>small-sample-bias.Rmd</code></div>
@@ -110,21 +110,21 @@ samples.</p>
 <p>For example, consider the CCME silver data that ships with
 <em>ssdtools</em>.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">Ag</span> <span class="op">&lt;-</span> <span class="fu">ssddata</span><span class="fu">::</span><span class="va"><a href="https://rdrr.io/pkg/ssddata/man/ccme_silver.html" class="external-link">ccme_silver</a></span></span>
+<code class="sourceCode R"><span><span class="va">Ag</span> <span class="op">&lt;-</span> <span class="fu">ssddata</span><span class="fu">::</span><span class="va"><a href="https://open-aims.github.io/ssddata/reference/ccme_silver.html" class="external-link">ccme_silver</a></span></span>
 <span><span class="va">Ag</span><span class="op">$</span><span class="va">ecdf</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/rank.html" class="external-link">rank</a></span><span class="op">(</span><span class="va">Ag</span><span class="op">$</span><span class="va">Conc</span><span class="op">)</span><span class="op">+</span><span class="fl">.25</span><span class="op">)</span><span class="op">/</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">Ag</span><span class="op">)</span><span class="op">+</span><span class="fl">.5</span><span class="op">)</span></span>
 <span><span class="va">Ag</span></span></code></pre></div>
-<pre><code><span><span class="co">## <span style="color: #949494;"># A tibble: 9 × 6</span></span></span>
-<span><span class="co">##   Chemical Species                Conc Group        Units  ecdf</span></span>
-<span><span class="co">##   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                 <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
-<span><span class="co">## <span style="color: #BCBCBC;">1</span> Silver   Oncorhynchus mykiss    0.24 Fish         ug/L  0.132</span></span>
-<span><span class="co">## <span style="color: #BCBCBC;">2</span> Silver   Lemna gibba            0.63 Plant        ug/L  0.237</span></span>
-<span><span class="co">## <span style="color: #BCBCBC;">3</span> Silver   Ceriodaphnia dubia     0.78 Invertebrate ug/L  0.342</span></span>
-<span><span class="co">## <span style="color: #BCBCBC;">4</span> Silver   Pimephales promelas    0.83 Fish         ug/L  0.447</span></span>
-<span><span class="co">## <span style="color: #BCBCBC;">5</span> Silver   Ictalurus punctatus    1.9  Fish         ug/L  0.553</span></span>
-<span><span class="co">## <span style="color: #BCBCBC;">6</span> Silver   Daphnia magna          2.12 Invertebrate ug/L  0.658</span></span>
-<span><span class="co">## <span style="color: #BCBCBC;">7</span> Silver   Hyalella azteca        4    Invertebrate ug/L  0.763</span></span>
-<span><span class="co">## <span style="color: #BCBCBC;">8</span> Silver   Chironomus tentans    13    Invertebrate ug/L  0.868</span></span>
-<span><span class="co">## <span style="color: #BCBCBC;">9</span> Silver   Micropterus salmoides 23    Fish         ug/L  0.974</span></span></code></pre>
+<pre><code><span><span class="co">## <span style="color: #949494;"># A tibble: 9 × 7</span></span></span>
+<span><span class="co">##   Chemical Species                Conc Group        Units Medium      ecdf</span></span>
+<span><span class="co">##   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                 <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
+<span><span class="co">## <span style="color: #BCBCBC;">1</span> Silver   Oncorhynchus mykiss    0.24 Fish         ug/L  Freshwater 0.132</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;">2</span> Silver   Lemna gibba            0.63 Plant        ug/L  Freshwater 0.237</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;">3</span> Silver   Ceriodaphnia dubia     0.78 Invertebrate ug/L  Freshwater 0.342</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;">4</span> Silver   Pimephales promelas    0.83 Fish         ug/L  Freshwater 0.447</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;">5</span> Silver   Ictalurus punctatus    1.9  Fish         ug/L  Freshwater 0.553</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;">6</span> Silver   Daphnia magna          2.12 Invertebrate ug/L  Freshwater 0.658</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;">7</span> Silver   Hyalella azteca        4    Invertebrate ug/L  Freshwater 0.763</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;">8</span> Silver   Chironomus tentans    13    Invertebrate ug/L  Freshwater 0.868</span></span>
+<span><span class="co">## <span style="color: #BCBCBC;">9</span> Silver   Micropterus salmoides 23    Fish         ug/L  Freshwater 0.974</span></span></code></pre>
 <p>Let us fit a log-normal distribution to the Ag endpoint data and
 estimate the parameters:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
@@ -517,7 +517,7 @@ The code is released under the
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.1.</p>
 </div>
 
       </footer>
